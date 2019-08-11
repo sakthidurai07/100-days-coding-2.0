@@ -1,0 +1,21 @@
+# Area of triangle
+
+Write a program that reads the length of the base and the height of a right-angled triangle.
+prints the area.
+Every number is given on a separate line.
+(A = 1/2*b*h)
+
+# input
+3
+5
+
+# code
+
+b = int(input())
+h = int(input())
+# Print the result with print()
+c = 0.5*b*h
+print(c)
+
+# output
+7.5

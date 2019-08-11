@@ -18,4 +18,5 @@ c = 0.5*b*h
 print(c)
 
 # output
+
 7.5

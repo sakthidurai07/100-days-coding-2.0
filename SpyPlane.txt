@@ -1,0 +1,57 @@
+#Spy Plane
+
+#input1
+6
+10001
+10002
+10003
+10001
+10003
+10002
+#input2
+5
+11100
+11200
+11300
+11200
+11300
+
+#code
+def CountFrequency(my_list):
+    
+freq = {} 
+    
+count = 0
+    
+str=""
+    
+for items in my_list: 
+      
+freq[items] = my_list.count(items) 
+    
+for key, value in freq.items():
+       
+if value%2!=0:
+         
+str=key
+    
+print (str or "All arrived!")
+      
+if __name__ == "__main__":  
+    
+my_list =[] 
+    
+r = int(input()) 
+    
+for i in range(1, r+1): 
+       
+nums = int (input()) 
+       
+my_list.append(nums) 
+    
+CountFrequency(my_list) 
+
+#output1
+All arrived!
+#output2
+11100

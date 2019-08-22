@@ -1,0 +1,34 @@
+#Countries and Cities
+Given a list of countries and cities of each country, 
+then given the names of the cities. 
+For each city print the country in which it is located.
+
+#input
+2
+USA Boston Pittsburgh Washington Seattle
+UK London Edinburgh Cardiff Belfast
+3
+Cardiff
+Seattle
+London
+
+#code
+motherland = {}
+
+for i in range(int(input())):
+    
+country, *cities = input().split()
+    
+for city in cities:
+        
+motherland[city] = country
+        
+
+for i in range(int(input())):
+    
+print(motherland[input()])
+
+#output
+UK
+USA
+UK

@@ -1,0 +1,108 @@
+#JugsMugsPugsPlusReverse Range
+Write a program that receives a number on the input and prints values from 1 to   
+that number subjected to the conditions below. 
+It also should receive another value 'rev' (0 or 1) on the input. 
+For every number in the given range, 
+If the number is a multiple of 3, or it contains digit 3, it prints "Jugs". 
+If the number is a multiple of 5, or it contains digit 5, it prints "Mugs".
+If the number is a multiple of 7, or it contains digit 7, it prints "Pugs".
+If the number is a multiple of both 3 and 5, it prints "JugsMugs",
+also if number contains 3 and 5, it prints "JugsMugs"
+If the number is a multiple of both 3 and 7, it prints "JugsPugs".
+also if number contains 3 and 7, it prints "JugsPugs"
+If the number is a multiple of 3, 5 and 7, it prints "JugsMugsPugs".
+also if number contains 3, 5 and 7, it prints "JugsMugsPugs"
+Otherwise, it prints the number.
+If the boolean 'rev' is True (or 1), then reverse the order of printing. 
+"PugsJugsMugs" for multiples of 3, 5 and 7
+"PugsMugs" for multiple of 3 and 7
+"MugsJugs" for multiple of 3 and 5 
+"PugsJugs" for multiple of 5 and 7
+
+#input1 
+5
+0
+#input2
+15
+1
+
+#code
+number=int (input())
+
+reverse=int (input())
+
+alpha=0
+
+beta=str(number)
+
+while(alpha<=number-1):
+  
+alpha=alpha+1
+  
+st=""
+  
+  
+if("3" in str(alpha)  or int(alpha)%3==0):
+      
+st1=st+"Jugs"
+  
+else:
+      
+st1=st
+  
+if"5" in str(alpha)  or int(alpha)%5==0:
+      
+st2=st1+"Mugs"
+      
+if(reverse==1):
+        
+st2="Mugs"+st1
+  
+else:
+      
+st2=st1
+  
+if("7" in str(alpha)  or int(alpha)%7==0):
+      
+st3=st2+"Pugs"
+      
+if(reverse==1):
+       
+st3="Pugs"+st2
+  
+else:
+      
+st3=st2
+
+  
+if("3" not in str(alpha)  and int(alpha)%3!=0) 
+and ( "5" not in str(alpha)  and int(alpha)%5!=0) 
+and ("7" not in str(alpha)  and int(alpha)%7!=0):
+      
+st3=alpha
+  
+print(st3) 
+
+
+#output1
+1
+2
+Jugs
+4
+Mugs
+#output2
+1
+2
+Jugs
+4
+Mugs
+Jugs
+Pugs
+8
+Jugs
+Mugs
+11
+Jugs
+Jugs
+Pugs
+MugsJugs

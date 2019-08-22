@@ -1,0 +1,30 @@
+# minimum of three numbers
+Given three integers, print the least of them.
+
+#input
+5
+3
+7
+
+#code
+a = int(input())
+
+b = int(input())
+
+c = int(input())
+
+
+if a<b and a<c :
+    
+print (a)
+
+elif b<a and b<c:
+    
+print (b) 
+
+else : 
+  
+print (c)
+
+#output
+3

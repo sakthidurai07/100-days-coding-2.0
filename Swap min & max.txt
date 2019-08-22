@@ -1,0 +1,25 @@
+#Swap min and max
+Given a list of distinct numbers, 
+swap the minimum and the maximum,
+print the resulting list.
+
+#input
+3 4 5 2 1
+
+#code
+a = [int(s) for s in input().split()]
+
+print(a)
+
+lst = list([int(s) for s in input().split()])
+
+
+max,min = lst.index(max(lst)), lst.index(min(lst))
+
+lst[max], lst[min] = lst[min], lst[max]
+
+
+print(lst)
+
+#output
+3 4 1 2 5

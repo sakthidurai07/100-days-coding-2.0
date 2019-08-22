@@ -1,0 +1,91 @@
+#JugsMugsPugsPlus and Reverse
+Write a program that receives a number on the input.
+It also should receive another value 'rev'  (either 0 or 1) on the input. 
+If the number is a multiple of 3, or it contains digit 3, it prints "Jugs". 
+If the number is a multiple of 5, or it contains digit 5, it prints "Mugs".
+If the number is a multiple of 7, or it contains digit 7, it prints "Pugs".
+If the number is a multiple of both 3 and 5, it prints "JugsMugs".
+also if number contains 3 and 5, it prints "JugsMugs"
+If the number is a multiple of both 3 and 7, it prints "JugsPugs".
+also if number contains 3 and 7, it prints "JugsPugs"
+If the number is a multiple of 3, 5 and 7, it prints "JugsMugPugs".
+also if number contains 3, 5 and 7, it prints "JugsMugsPugs"
+Otherwise, it prints the number.
+If the boolean 'rev' is True (or 1), then reverse the order of printing. 
+"PugsJugsMugs" for multiples of 3, 5 and 7
+"PugsMugs" for multiple of 5 and 7
+"MugsJugs" for multiple of 3 and 5 
+"PugsJugs" for multiple of 3 and 7
+  
+#input1 
+73 
+False  
+#input2
+73 
+True
+#input3
+51  
+#input4 
+105
+
+#code
+
+number = int (input())
+
+reverse = int (input())
+
+st=""
+
+a = 3 
+
+b = 5 
+
+c = 7
+
+if(str(a) in str(number)  or number%3==0):
+ 
+st1=st+"Jugs"
+
+else:
+  
+st1=st
+
+if (str(b) in str(number)  or number%5==0):
+  
+st2=st1+"Mugs"
+  
+if(reverse==1):
+    
+st2="Mugs"+st1
+
+else:
+  
+st2=st1
+
+if(str(c) in str(number) or number%7==0):
+  
+st3=st2+"Pugs"
+  
+if(reverse==1):
+    
+st3="Pugs"+st2
+
+else:
+  
+st3=st2
+
+
+if(str(a) not in str(number)  and number%3!=0) and ( str(b) not in str(number)  
+and number%5!=0) and (str(c) not in str(number)  and number%7!=0):
+  
+st3=number
+print(st3) 
+
+#output1
+PugsJugs
+#output2
+JugsMugs
+#output3 
+JugsMugsPugs
+#output4
+JugsPugs

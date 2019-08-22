@@ -1,0 +1,42 @@
+#Second Maximum
+Given a sequence of distinct non-negative integers,
+where each number is written in a separate line. 
+The sequence ends with 0. 
+Print the second largest element in this sequence. 
+It is guaranteed that the sequence has at least two elements.
+
+#input
+1
+7
+9
+0
+
+#code
+num = int(input())
+
+num1 = 0
+
+num2 = 0
+
+
+while num != 0:
+  
+if num > num1:
+    
+num2 = num1
+    
+num1 = num
+  
+else:
+    
+if num2 < num:
+      
+num2 = num
+  
+num = int(input())  
+
+print(num2)
+
+
+#output
+7

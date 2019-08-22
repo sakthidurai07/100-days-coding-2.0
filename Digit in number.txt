@@ -1,0 +1,58 @@
+#Digit in Number
+
+Read two inputs. 
+The first input is a digit. 
+The second input is a number. 
+Is the digit present in the number? If yes, return True.
+If no, return False.
+
+#input1
+1
+100
+
+#input2
+4
+234
+
+#input3
+1
+2000
+
+#code
+#method1
+digit_c = input()
+
+number_s = input() 
+
+
+for digit in number_s: 
+  
+if digit == digit_c:
+    
+print(True)
+    
+break
+
+else:
+  
+print(False)
+ 
+ 
+#method2 
+if digit_c in number_s: 
+  
+print(True)
+else:
+  
+print(False)
+
+#method3  
+
+print(digit_c in number_s)
+
+#output1
+True
+#output2
+True
+#output3
+False

@@ -1,0 +1,35 @@
+#odd or even
+Given an integer, print "odd" if it's odd and print "even" otherwise.
+
+#input1
+2
+#input2
+5
+
+#code
+
+def getSum(n): 
+   
+    
+sum = 0
+    
+while (n != 0): 
+      
+        
+sum = sum + int(n % 10) 
+        
+n = int(n/10) 
+      
+    
+return sum
+  
+
+
+n = int(input())
+
+print (getSum(n))
+
+#output1
+even
+#output2
+odd 

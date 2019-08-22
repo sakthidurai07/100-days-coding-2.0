@@ -1,0 +1,45 @@
+#JugsMugsPugs Plus
+Write a program that receives a number on the input.
+If the number is a multiple of 3, or it contains digit 3, it prints "Jugs". 
+If the number is a multiple of 5, or it contains digit 5, it prints "Mugs".
+If the number is a multiple of 7, or it contains digit 7, it prints "Pugs".
+Otherwise, it prints the number.
+
+#input1
+73 
+#input2 
+51  
+#input3 
+105
+
+#code
+inp = int (input()) 
+
+digit = 3
+
+digiti = 5
+
+digitn = 7
+
+outp = ""     
+
+if (str(digit) in str(inp) or  inp % 3 == 0) :
+    
+outp += "Jugs"
+   
+if (str(digiti) in str(inp) or  inp % 5 == 0) :
+    
+outp += "Mugs"
+   
+if (str(digitn) in str(inp) or inp % 7 == 0) :
+    
+outp += "Pugs"
+    
+print (outp or inp)
+
+#output1
+JugsPugs
+#output2
+JugsPugs
+#output3
+JugsMugs

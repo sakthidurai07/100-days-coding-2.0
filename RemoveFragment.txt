@@ -1,0 +1,25 @@
+#RemoveFragment
+Given a string in which the letter h occurs at least twice. 
+Remove from that string the first and the last occurrence of the letter h, 
+as well as all the characters between them.
+
+#input
+In the hole in the ground there lived a hobbit
+
+#code
+s=input()
+
+a=s[:s.find('h')]
+
+b=s[s.find('h'):s.rfind('h')+1]
+
+c=s[s.rfind('h')+1:]
+
+s=a+c 
+
+print(s)
+
+
+
+#output
+In tobbit

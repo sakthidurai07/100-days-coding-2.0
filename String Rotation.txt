@@ -1,0 +1,36 @@
+# String Rotation
+
+Write a Python function string_rotate to generate the desired pattern. The function should accept an integer as its single argument. 
+
+Input and Output Format:
+Input consists of a single integer that corresponds to n.
+Assume that 0 < n <= 26. 
+Refer sample output for output formatting specifications.
+
+#input
+5
+
+#code
+
+def string_rotate(n):
+  
+ inp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  
+ input=inp[0:n]
+  
+ L = input
+  for i in range (1,n):
+     
+ L += " " + input[i]+input[i+1:]+input[0:i] 
+    
+  
+ return L
+ 
+
+#output
+ABCDE
+BCDEA
+CDEAB
+DEABC
+EABCD
+  

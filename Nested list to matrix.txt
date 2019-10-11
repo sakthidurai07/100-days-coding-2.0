@@ -1,0 +1,31 @@
+#Convert Nested Lists to Matrix
+
+Write a function that accepts a nested list as an argument. 
+It must return the incoming nested list into a well formed matrix. 
+
+The nested list may have lists that contain varied number of elements.
+Balance out the rows in the matrix so that all rows are equal to the longest 
+row in the nested list. Use fillvalue 0 to populate the rows accordingly. 
+
+#Example 
+
+convert_to_matrix([[1, 2]])    -> [[1, 2]]
+convert_to_matrix([[1], [2, 3]]) -> [[1, 0], [2, 3]]
+convert_to_matrix([[1], [2, 3], [4, 5, 6]]) -> 
+  [[1, 0, 0], 
+   [2, 3, 0],
+   [4, 5, 6]]
+
+#code
+
+def convert_to_matrix(alist):
+  
+len_of_max_list = max([len(i) for i in alist] or [0])
+  
+for row in alist:
+      
+row.extend([0] * (len_of_max_list - len(row)))
+  
+print(alist)
+  
+return alist
